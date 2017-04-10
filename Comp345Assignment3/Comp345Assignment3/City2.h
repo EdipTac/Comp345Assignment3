@@ -13,6 +13,7 @@ public:
 
 	void addCubes(int add);
 	void addStation();
+	void removeCubes(int nbToDelete);
 
 	// The city's name
 	std::string name() const;
@@ -23,6 +24,9 @@ public:
 	std::string colour() const;
 	std::string& colour();
 	void colour(const std::string& colour);
+
+	void printCity();
+
 
 private:
 	std::string _name;

@@ -25,13 +25,17 @@ private:
 	std::string _name;
 	std::unique_ptr<ReferenceCard> _myReference;
 	std::unique_ptr<RoleCard> _myRole;
+	Pawn _myPawn;
+	std::vector<std::string> _myCards;
 
 public:
 	Player();
 	Player(std::string name, std::unique_ptr<RoleCard> role);
 	void displayRole();
 	void displayReference();
-
-
-
+	Pawn myPawn();
+	void addCard(std::string card);
+	void displayCards();
+	void displayFirstCard();
+	std::vector<std::string> cards();
 };

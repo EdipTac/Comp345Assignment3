@@ -1,5 +1,5 @@
 #include "City2.h"
-
+#include <iostream>
 
 
 City2::City2(std::string name, std::string colour, int cubes)
@@ -49,4 +49,15 @@ void City2::addStation() {
 	_hasResearchStation = true;
 }
 
+void City2::removeCubes(int nbToDelete) {
+	if (_currentCubes > 0) {
+		_currentCubes = _currentCubes - nbToDelete;
+	}
+	else {
+		std::cout << "There are no diseases in this current city.\n";
+	}
+}
 
+void City2::printCity() {
+	std::cout << "City name: " << _name << "\n Number of disease cubes: " << _currentCubes << "\n Has a research station: " << _hasResearchStation << std::endl;
+}

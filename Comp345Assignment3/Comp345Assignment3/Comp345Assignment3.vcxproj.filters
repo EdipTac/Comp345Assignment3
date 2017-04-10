@@ -45,6 +45,15 @@
     <ClInclude Include="DeckofRoles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BuildResearchStation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreatDisease.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareKnowledge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Context.cpp">
@@ -72,6 +81,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DeckofRoles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildResearchStation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TreatDisease.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareKnowledge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

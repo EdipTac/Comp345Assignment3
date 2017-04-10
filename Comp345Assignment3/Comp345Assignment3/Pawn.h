@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "City2.h"
 
 /*
 This is the header file for the pawns that will be used within the game. Currently since only the Distinct Part 1
@@ -11,9 +12,12 @@ time only the strings were given to the pawn.
 class Pawn {
 public:
 	Pawn();
-	Pawn(std::string color, std::string position);
+	Pawn(std::string color, City2 *position);
+	void changePos(City2 *position);
+	std::string &getPos();
+	City2 *position();
 
 private:
 	std::string _color;
-	std::string _position;
+	City2 *_position;
 };

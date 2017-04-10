@@ -13,11 +13,11 @@ group members while doing the first build of the game, where the color of the ro
 The code contains 2 constructors as well as 2 display functions to print out the details of each card within the character's hand.
 */
 
-Player::Player() {
+Player::Player(){
 	_name = "";
 	_myReference = std::make_unique<ReferenceCard>();
 	_myRole = std::make_unique<RoleCard>();
-
+	_myPawn = Pawn();
 }
 
 Player::Player(std::string name, std::unique_ptr<RoleCard> role) : _name(name), _myReference(std::make_unique<ReferenceCard>()), _myRole(std::move(role)) {}
@@ -32,6 +32,28 @@ void Player::displayReference() {
 	_myReference->printReference();
 }
 
+Pawn Player::myPawn() {
+	return _myPawn;
+}
 
+void Player::addCard(std::string card) {
+	_myCards.push_back(card);
+}
+
+void Player::displayCards() {
+	std::cout << "The following cards are at hand \n";
+	for (auto i = 0u; _myCards.size(); i++)
+	{
+		std::cout << _myCards[i] << std::endl;
+	}
+}
+
+std::vector<std::string> Player::cards() {
+	return _myCards;
+}
+
+void Player::displayFirstCard() {
+	std::cout << _myCards[0] << std::endl;
+}
 
 

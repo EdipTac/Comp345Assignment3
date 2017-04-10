@@ -9,13 +9,22 @@ that the pawn is in within the map.
 The defauly position is chosen as Atlanta since that is where all characters begin the game.
 */
 
-Pawn::Pawn() {
-	_color = "";
-	_position = "Atlanta";
+Pawn::Pawn() : _color (""), _position() {
+
 }
 
-Pawn::Pawn(std::string col, std::string pos) {
-	_color = col;
+Pawn::Pawn(std::string col, City2* pos) : _color(col), _position(pos) {
+}
+
+void Pawn::changePos(City2 *pos) {
 	_position = pos;
 }
 
+std::string &Pawn::getPos() {
+	std::string temp = _position->name();
+	return (temp);
+}
+
+City2* Pawn::position() {
+	return _position;
+}
